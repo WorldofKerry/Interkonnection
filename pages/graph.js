@@ -1,6 +1,7 @@
 import fs from 'fs'
 import CytoscapeComponent from 'react-cytoscapejs'
 import path from 'path'
+import Network from '../components/Network'
 
 const root = process.cwd()
 
@@ -41,6 +42,7 @@ export default function Graph({ graph }) {
   const elements = [...nodes, ...edges]
   return (
     <>
+      <Network />
       <h1>Click on the nodes for more info!</h1>
       <CytoscapeComponent
         elements={elements}
