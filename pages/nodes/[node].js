@@ -4,10 +4,10 @@
 // import kebabCase from '@/lib/utils/kebabCase'
 import fs from 'fs'
 import path from 'path'
-import getAllFilesRecursively from '@lib/utils/files'
-import Graph from '@lib/Graph.js'
+import getAllFilesRecursively from '@/lib/utils/files'
+import Graph from '@/lib/Graph.js'
 // import ReactMarkdown from 'react-markdown'
-import MarkdownRender from '@lib/MarkdownRender'
+import MarkdownRender from '@/lib/MarkdownRender'
 import { useRouter } from 'next/router'
 
 const root = process.cwd()
