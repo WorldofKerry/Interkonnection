@@ -87,10 +87,10 @@ class Network extends Component {
               window.location.href = evt.target.data("href");
               // console.log(evt.target.style())
             });
-            let options = {
-              name: "cose",
-            };
-            cy.layout(options);
+            // let options = {
+            //   name: "null",
+            // };
+            // cy.layout(options);
           }}
         />
       </div>
