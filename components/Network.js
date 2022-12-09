@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import CytoscapeComponent from "react-cytoscapejs";
-import * as graph  from '../data/graph.json'
+// import * as graph  from '../data/graph.json'
+import fs from 'fs'
+import path from 'path'
 
 const root = process.cwd();
 
@@ -12,6 +14,7 @@ function fileNameFilter(fileName) {
   return !dateRegex.test(fileName) && !extensionRegex.test(fileName);
 }
 
+var graph = JSON.parse(fs.readFileSync(path.join(root, 'data', 'graph.json'), 'utf8'))
 var nodes = graph.elements.nodes.filter((node) => {
     return fileNameFilter(node.data.name)
   })
