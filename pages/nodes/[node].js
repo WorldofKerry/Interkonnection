@@ -1,11 +1,5 @@
-// import generateRss from '@/lib/generate-rss'
-// import { getAllFilesFrontMatter } from '@/lib/mdx'
-// import { getAllTags } from '@/lib/tags'
-// import kebabCase from '@/lib/utils/kebabCase'
-import fs from 'fs'
 import path from 'path'
 import Graph from '@/lib/Graph'
-// import ReactMarkdown from 'react-markdown'
 import MarkdownRender from '@/lib/MarkdownRender'
 import { useRouter } from 'next/router'
 
@@ -20,18 +14,14 @@ export async function getStaticPaths() {
     paths: urlEndings.map((urlEnding) => ({
       params: { node: urlEnding },
     })),
-    // paths: [{params: {node: "test"}}],
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params }) {
-//   var posts = graph.getNodes();
-// const post = posts.find((post) => post.urlEnding === params.node);
   const posts = graph.getNodes();
   var post = posts[10]; 
   const urlEndings = posts.map((post) => post.urlEnding);
-  // return { props: { title: params.node, content: posts[10].urlEnding.toString()} }
   post = posts.filter((post) => post.urlEnding === params.node)[0];
   if (!post) {
     return { props: { title: params.node, content: "No content", backlinks: []} };
