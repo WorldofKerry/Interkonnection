@@ -4,11 +4,10 @@ import path from 'path'
 
 const root = process.cwd()
 
-export default function Graph({ graph }) {
- 
+export default function Graph({ graph }) { 
   return (
     <>
-      <Network />    
+      <Network graph={graph}/>    
     </>
   )
 }
