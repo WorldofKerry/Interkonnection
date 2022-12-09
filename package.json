@@ -20,5 +20,9 @@
     "react-katex": "^3.0.1",
     "react-markdown": "^8.0.4",
     "remark-math": "^5.1.1"
+  }, 
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=16.0.0"
   }
 }
