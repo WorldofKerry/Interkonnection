@@ -34,7 +34,7 @@ export default function Node({ title, content, backlinks}) {
   const fullPath = router.pathname;
   const urlPrefix = fullPath.substring(0, fullPath.lastIndexOf("/")) + "/";
   return (
-    <>
+    <div style={{padding: "1%"}}>
       <h1>{title}</h1>
       <MarkdownRender>{content}</MarkdownRender>
       <h2>Backlinks</h2>
@@ -45,6 +45,6 @@ export default function Node({ title, content, backlinks}) {
           </a>
         ))}
       </ul>
-    </>
+    </div>
   )
 }

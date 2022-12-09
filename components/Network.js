@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import CytoscapeComponent from "react-cytoscapejs";
-// import * as graph  from '../data/graph.json'
-import fs from "fs";
-import path from "path";
 
 class Network extends Component {
   constructor(props) {
     super(props);
     this.graph = props.graph; 
+    this.width = props.width;
+    this.height = props.height;
   }
   render() {
     function fileNameFilter(fileName) {
@@ -47,13 +46,12 @@ class Network extends Component {
       const elements = [...nodes, ...edges];
     return (
       <div>
-        <h1>Network</h1>
         <CytoscapeComponent
           elements={elements}
           style={{
-            width: "900px",
-            height: "506px",
-            backgroundColor: "#ffffff",
+            width: this.width,
+            height: this.height,
+            backgroundColor: "#000000",
           }}
           stylesheet={[
             {

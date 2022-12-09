@@ -7,6 +7,6 @@ const nextConfig = {
   },
 }
 
-const withTM = require('next-transpile-modules')(['react-cytoscapejs'])
+const withTM = require('next-transpile-modules')(['react-cytoscapejs', 'use-window-size-v2'])
 
 module.exports = withTM(nextConfig)

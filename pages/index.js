@@ -1,18 +1,19 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Network from '@/components/Network'
-import fs from 'fs'
-import path from 'path'
-
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import Network from "@/components/Network";
+import fs from "fs";
+import path from "path";
 
 export async function getStaticProps() {
-  const root = process.cwd()
-  const graph = JSON.parse(fs.readFileSync(path.join(root, 'data', 'graph.json'), 'utf8'))
+  const root = process.cwd();
+  const graph = JSON.parse(
+    fs.readFileSync(path.join(root, "data", "graph.json"), "utf8")
+  );
   return {
     props: {
       graph,
     },
-  }
+  };
 }
 
 export default function Home({ graph }) {
@@ -23,7 +24,13 @@ export default function Home({ graph }) {
         <meta name="description" content="A web of knowledge" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Network graph={graph}/>
+      <div style={{position: 'absolute', 
+      top: '50%', 
+      left: '50%', 
+      marginRight: '-50%', 
+      transform: 'translate(-50%, -50%)'}}>
+        <Network graph={graph} width={"100vw"} height={"100vh"} />
+      </div>
     </div>
-  )
+  );
 }
