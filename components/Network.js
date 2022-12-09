@@ -39,7 +39,7 @@ var nodes = graph.elements.nodes.filter((node) => {
   })
   const elements = [...nodes, ...edges]
 
-export default class Network extends Component {  
+class Network extends Component {  
   constructor(props) {
     super(props);
   }
@@ -70,16 +70,6 @@ export default class Network extends Component {
                 "font-weight": "bold",
                 "text-wrap": "wrap",
                 "text-max-width": "15px",
-                // 'text-background-color': '#ffffff',
-                // 'text-background-opacity': 0.5,
-                // 'text-background-shape': 'roundrectangle',
-                // 'text-background-padding': '5px',
-                // 'text-border-color': '#000000',
-                // 'text-border-opacity': 0.5,
-                // 'text-border-width': 1,
-                // 'text-border-style': 'solid',
-                // 'text-border-shape': 'roundrectangle',
-                // 'text-margin-y': '-5px',
                 "text-margin-x": "0px",
                 "text-events": "yes",
                 "text-rotation": "autorotate",
@@ -108,3 +98,5 @@ export default class Network extends Component {
     );
   }
 }
+
+export default Network;
