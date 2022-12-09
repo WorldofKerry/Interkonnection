@@ -2,10 +2,11 @@
 // import { getAllFilesFrontMatter } from '@/lib/mdx'
 // import { getAllTags } from '@/lib/tags'
 // import kebabCase from '@/lib/utils/kebabCase'
-// import fs from 'fs'
+import fs from 'fs'
 import path from 'path'
 import getAllFilesRecursively from '../../lib/utils/files'
 import Graph from '../../lib/graph'
+import ReactMarkdown from 'react-markdown'
 
 const root = process.cwd()
 const prefixPaths = path.join(root, "data", "Knowledge");
@@ -41,7 +42,8 @@ export default function Node({ title, content }) {
   return (
     <>
       <h1>{title}</h1>
-      <text>{content}</text>
+      {/* <text>{content}</text> */}
+      <ReactMarkdown>{content}</ReactMarkdown>
     </>
   )
 }

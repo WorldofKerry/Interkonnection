@@ -1,4 +1,8 @@
 import Network from '../components/Network'
+import fs from 'fs'
+import path from 'path'
+
+const root = process.cwd()
 
 export default function Graph({ graph }) {
  

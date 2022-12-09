@@ -23,7 +23,7 @@ var nodes = graph.elements.nodes.filter((node) => {
     newNode.position = {}
     newNode.position.x = Math.round(node.position.x)
     newNode.position.y = Math.round(node.position.y)
-    newNode.data.href = 'obsidian/' + node.data.name.replaceAll(' ', '-')
+    newNode.data.href = 'nodes/' + node.data.name.replaceAll(' ', '_')
     return newNode
   })
   var edges = graph.elements.edges.filter((edge) => {
