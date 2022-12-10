@@ -51,20 +51,19 @@ class Network extends Component {
           style={{
             width: this.width,
             height: this.height,
-            backgroundColor: "#000000",
+            backgroundImage: 'radial-gradient(#004954, #000000)',
           }}
           stylesheet={[
             {
               selector: "node",
               style: {
                 label: "data(label)",
-                color: "#000000",
                 "text-valign": "center",
                 "text-halign": "center",
-                "background-color": "#A020F0",
-                "text-outline-color": "#FFFF00",
-                "text-outline-width": 1,
-                "text-outline-opacity": 0.75,
+                "background-color": "#008094",
+                "text-outline-color": "#00C2E0",
+                "text-outline-width": 0.5,
+                "text-outline-opacity": 1,
                 "font-size": 5,
                 "font-weight": "bold",
                 "text-wrap": "wrap",
@@ -72,12 +71,14 @@ class Network extends Component {
                 "text-margin-x": "0px",
                 "text-events": "yes",
                 "text-rotation": "autorotate",
+                "color": "#000000",
               },
             },
             {
               selector: "edge",
               style: {
                 width: 0.75,
+                "line-color": "#00C2E0",
               },
             },
           ]}

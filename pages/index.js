@@ -1,5 +1,4 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import Network from "@/components/Network";
 import fs from "fs";
 import path from "path";
@@ -18,7 +17,7 @@ export async function getStaticProps() {
 
 export default function Home({ graph }) {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Interkonnection</title>
         <meta name="description" content="A web of knowledge" />
