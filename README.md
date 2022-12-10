@@ -16,6 +16,6 @@ I'm especially looking for more connections relating to social/biological/chemic
 - front-end -> [Reactjs](https://reactjs.org/)/[Nextjs](https://nextjs.org/)
   - graphing -> [cytoscape](https://js.cytoscape.org/)/[react-cytoscapejs](https://www.npmjs.com/package/react-cytoscapejs)
 - file management
-  -> topic/node files -> edited in [Obsidian](https://obsidian.md/)
-  -> graph/network -> exported using [Juggl](https://juggl.io/)
+  - topic/node files -> edited in [Obsidian](https://obsidian.md/)
+  - graph/network -> exported using [Juggl](https://juggl.io/)
 - graph algorithms -> autocompleted with [Github Copilot](https://github.com/features/copilot) (will eventually optimize it)
