@@ -59,7 +59,7 @@ class Network extends Component {
 
     if (matchingNode.length > 0) {
       // If a matching node is found, change its color to red
-      matchingNode.style({ "background-color": "red" });
+      matchingNode.style({ "background-color": "yellow" });
       this.highlightedNode = matchingNode;
     } else {
       // If no matching node is found, display a message
