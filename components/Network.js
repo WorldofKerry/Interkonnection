@@ -113,6 +113,18 @@ class Network extends Component {
             cy.on("tap", "node", function (evt) {
               window.location.href = "/nodes/" + evt.target.data("urlEnding");
             });
+            cy.on("drag", "node", function (evt) {
+              const node = evt.target;
+              const edges = node.connectedEdges();
+              const nodes = edges.connectedNodes();
+              nodes.style({ "background-color": "#FFD700" });
+            });
+            cy.on("dragfree", "node", function (evt) {
+              const node = evt.target;
+              const edges = node.connectedEdges();
+              const nodes = edges.connectedNodes();
+              nodes.style({ "background-color": "" });
+            });
             
             if (this.prevNodeTitle) {
               const matchingNode = cy.nodes().filter((node) => {

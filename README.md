@@ -32,4 +32,3 @@ I'm especially looking for more connections relating to social/biological/chemic
 ## Todo
 - Add a search bar to every node page, to be able to search for the shortest path from one node to another node (Dijkstra's)
 - Autofill empty pages with Wikipedia/ChatGPT
-- Similar to Obsidian.md, while dragging a node in the graph, darken the non-connected nodes
