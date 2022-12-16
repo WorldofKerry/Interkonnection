@@ -70,15 +70,42 @@ class Network extends Component {
             width: this.width,
             height: this.height,
             backgroundImage: "radial-gradient(#004954, #000000)",
-          }}
+          }}          
           cy={(cy) => {
             this.cy = cy;
             cy.on("tap", "node", function (evt) {
-              // redirect to the node's page
               window.location.href = "nodes/" + evt.target.data("urlEnding");
-              // console.log(evt.target.style())
             });
           }}
+          stylesheet={[
+            {
+              selector: "node",
+              style: {
+                label: "data(label)",
+                "text-valign": "center",
+                "text-halign": "center",
+                "background-color": "#008094",
+                "text-outline-color": "#00C2E0",
+                "text-outline-width": 0.5,
+                "text-outline-opacity": 1,
+                "font-size": 5,
+                "font-weight": "bold",
+                "text-wrap": "wrap",
+                "text-max-width": "15px",
+                "text-margin-x": "0px",
+                "text-events": "yes",
+                "text-rotation": "autorotate",
+                "color": "#000000",
+              },
+            },
+            {
+              selector: "edge",
+              style: {
+                width: 0.75,
+                "line-color": "#00C2E0",
+              },
+            },
+          ]}
         />
       </div>
     );
