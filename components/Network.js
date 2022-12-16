@@ -117,7 +117,7 @@ class Network extends Component {
               const node = evt.target;
               const edges = node.connectedEdges();
               const nodes = edges.connectedNodes();
-              nodes.style({ "background-color": "#FFD700" });
+              nodes.style({ "background-color": "yellow" });
             });
             cy.on("dragfree", "node", function (evt) {
               const node = evt.target;
