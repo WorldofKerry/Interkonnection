@@ -3,6 +3,7 @@ import Graph from '@/lib/Graph'
 import MarkdownRender from '@/lib/MarkdownRender'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import styles from '@/styles/Node.module.css'
 
 const root = process.cwd()
 const prefixPaths = path.join(root, "data", "Knowledge");
@@ -49,13 +50,9 @@ export default function Node({ title, content, backlinks, urlEnding}) {
         pathname: "/graph/" + urlEnding,
       }}>
         <button
-          style={{
-            position: "fixed",
-            bottom: "0",
-            right: "0",
-          }}
+          className={styles.backButton}
         >
-          Back to Graph
+          Graph
         </button>
       </Link>
     </div>

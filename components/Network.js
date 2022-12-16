@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import CytoscapeComponent from "react-cytoscapejs";
 import Cytoscape from "cytoscape";
 import COSEBilkent from "cytoscape-cose-bilkent";
-import styles from "../styles/Network.module.css";
+import styles from "@/styles/Network.module.css";
 
 Cytoscape.use(COSEBilkent);
 
