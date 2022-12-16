@@ -1,0 +1,2 @@
+The amorphous apperance of visual categories can be modelled using regions of feature space. Commonly, feature descriptors are quantised to a codebook of "visual words" using [[K-Means Clustering]]. 
+This collection of features is called bag of features, which deals well with occlusion, scale variance and rotation variance. 

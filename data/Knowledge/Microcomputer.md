@@ -1,5 +1,4 @@
 ## Examples
-
-- [[Arduino Uno]]
-- [[ESP32]]
-- [[Particle Boron]]
+ - [[Arduino Uno]]
+ - [[ESP32]]
+ - [[Particle Boron]]

@@ -1,3 +1,2 @@
 ## Types
-
-- [[Wide Area Network (WAN)]]
+ - [[Wide Area Network (WAN)]]

@@ -1,6 +1,4 @@
-Non-linear functions are used to model non-linear data.
-
+Non-linear functions are used to model non-linear data. 
 ## Common Functions
-
-- [[Rectified Linear Unit (ReLU)]]
-- [[Sigmoid]]
+ - [[Rectified Linear Unit (ReLU)]]
+ - [[Sigmoid]]

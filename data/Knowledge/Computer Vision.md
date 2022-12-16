@@ -1,7 +1,25 @@
-Allows computers to get a high-level understand from digial images or videos.
-
+Allows computers to get a high-level understand from digial images or videos. 
 ## Topics
-
-- [[Image Formation]]
-- [[Image Filtering]]
-- [[Sampling]]
+ - [[Image Formation]]
+ - [[Image Filtering]]
+ - [[Sampling]]
+ - [[Cameras]]
+ - [[Template Matching]]
+ - [[Scaled Representations]]
+ - [[Edge Detection]]
+ - [[Corner Detection]]
+ - [[Colour]]
+ - [[Texture]]
+ - [[Local Image Features]]
+ - [[Planar Transformations]]
+ - [[Hough Transform]]
+ - [[Stereo]]
+ - [[Optical Flow]]
+ - [[Multiview Reconstruction]]
+ - [[Visual Classification]]
+ - [[Neural Network]]
+ - [[Deep Learning]]
+ - [[Boosting Forests]]
+ - [[Decision Tree]]
+ - [[Clustering]]
+ - [[Pixel Labelling]]

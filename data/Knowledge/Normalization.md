@@ -1,0 +1,1 @@
+The scaling of data such that the normalized data falls in a range. 

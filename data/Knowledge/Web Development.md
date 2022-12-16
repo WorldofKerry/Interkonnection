@@ -1,4 +1,3 @@
 ## Components
-
-- [[Server]]
-- [[Client]]
+ - [[Server]]
+ - [[Client]]

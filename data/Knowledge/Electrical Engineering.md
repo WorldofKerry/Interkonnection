@@ -1,4 +1,3 @@
 ## Topics
-
-- [[Karnaugh Maps]]
-- [[Signals and Systems]]
+ - [[Karnaugh Maps]]
+ - [[Signals and Systems]]

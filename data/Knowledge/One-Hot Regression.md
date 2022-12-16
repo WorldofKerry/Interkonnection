@@ -1,0 +1,1 @@
+This allows regression to one-hot targets = 1 vs all classifiers. 

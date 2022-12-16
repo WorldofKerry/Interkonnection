@@ -1,11 +1,7 @@
 [[Layers]]
-
 ## Types
-
-- [[Multilayer Perceptron]]
-- [[Convolutioan Neural Network]]
-
+ - [[Multilayer Perceptron]]
+ - [[Convolutional Neural Network (CNN)]]
 ## Techniques
-
-- [[Activation Function]]
-- [[Normalization]]
+ - [[Activation Function]]
+ - [[Normalization]]

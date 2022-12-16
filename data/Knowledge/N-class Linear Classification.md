@@ -1,0 +1,2 @@
+A linear model regresses from input $x$ to class $y$, such that $w=(x^Tx)^{-1}x^Ty$. 
+Seperating hyperplane, projection to a line defined by $w$, such that $\hat y=\text{sign} h = \text{sign} w^Tx_q$. This results in $O(n^2)$ 1v1 classifiers. The interger class id $y=\{0, 1, ...\}$ can be directly regressed. However, it's better to use [[One-Hot Regression]]. 

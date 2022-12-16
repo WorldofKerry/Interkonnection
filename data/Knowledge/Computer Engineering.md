@@ -1,2 +1,2 @@
-- [[Software]], which focuses on using [[Data Structure]]s and [[Algorithm]]s to solve problems
-- [[Hardware]], which uses [[Electrical Engineering]] and [[Computation]] to solve problems.
+ - [[Software]], which focuses on using [[Data Structure]]s and [[Algorithm]]s to solve problems
+ - [[Computer Hardware]], which uses [[Electrical Engineering]] and [[Computation]] to solve problems. 

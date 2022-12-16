@@ -1,4 +1,3 @@
 ## Types
-
-- [[Traditional Database]]
-- [[NoSQL Database]]
+ - [[Traditional Database]]
+ - [[NoSQL Database]]

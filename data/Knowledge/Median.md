@@ -1,0 +1,1 @@
+The middle number in a sorted, ascending/descending list of numbers

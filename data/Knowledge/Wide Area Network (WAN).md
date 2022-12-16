@@ -1,3 +1,2 @@
 ## Implementations
-
-- [[LoRaWAN]]
+ - [[LoRaWAN]]

@@ -1,3 +1,2 @@
 ## Algorithms
-
 [[Dominating Set]]
