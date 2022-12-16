@@ -19,3 +19,6 @@ I'm especially looking for more connections relating to social/biological/chemic
   - topic/node files -> edited in [Obsidian](https://obsidian.md/)
   - graph/network -> exported using [Juggl](https://juggl.io/)
 - graph algorithms -> autocompleted with [Github Copilot](https://github.com/features/copilot) (will eventually optimize it)
+
+## Bugs
+- Nodes with brackets () in their name seems to have no backlinks

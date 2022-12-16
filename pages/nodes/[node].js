@@ -2,6 +2,7 @@ import path from 'path'
 import Graph from '@/lib/Graph'
 import MarkdownRender from '@/lib/MarkdownRender'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const root = process.cwd()
 const prefixPaths = path.join(root, "data", "Knowledge");
@@ -20,21 +21,20 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const posts = graph.getNodes();
-  var post = posts[10]; 
-  const urlEndings = posts.map((post) => post.urlEnding);
-  post = posts.filter((post) => post.urlEnding === params.node)[0];
+  const post = posts.filter((post) => post.urlEnding === params.node)[0];
   if (!post) {
     return { props: { title: params.node, content: "No content", backlinks: []} };
   }
-  return { props: { title: post.title, content: post.content, backlinks: post.backlinks} }
+  return { props: { title: post.title, content: post.content, backlinks: post.backlinks, urlEnding: post.urlEnding} }
 }
 
-export default function Node({ title, content, backlinks}) {
+export default function Node({ title, content, backlinks, urlEnding}) {
   const router = useRouter()
   const fullPath = router.pathname;
   const urlPrefix = fullPath.substring(0, fullPath.lastIndexOf("/")) + "/";
+  
   return (
-    <div style={{padding: "1%"}}>
+    <div style={{ padding: "1%" }}>
       <h1>{title}</h1>
       <MarkdownRender>{content}</MarkdownRender>
       <h2>Backlinks</h2>
@@ -45,6 +45,19 @@ export default function Node({ title, content, backlinks}) {
           </a>
         ))}
       </ul>
+      <Link href={{
+        pathname: "/graph/" + urlEnding,
+      }}>
+        <button
+          style={{
+            position: "fixed",
+            bottom: "0",
+            right: "0",
+          }}
+        >
+          Back to Graph
+        </button>
+      </Link>
     </div>
-  )
+  );
 }
