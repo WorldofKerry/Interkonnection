@@ -33,10 +33,6 @@ export default function Node({ title, content, backlinks, urlEnding}) {
   const fullPath = router.pathname;
   const urlPrefix = fullPath.substring(0, fullPath.lastIndexOf("/")) + "/";
   
-  function handleBack() {
-    router.back();
-  }
-  
   return (
     <div style={{ padding: "1%" }}>
       <h1>{title}</h1>
@@ -50,8 +46,7 @@ export default function Node({ title, content, backlinks, urlEnding}) {
         ))}
       </ul>
       <Link href={{
-        pathname: "/testing",
-        query: { node: urlEnding },
+        pathname: "/graph/" + urlEnding,
       }}>
         <button
           style={{

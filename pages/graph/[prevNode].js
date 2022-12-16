@@ -4,21 +4,28 @@ import fs from "fs";
 import path from "path";
 import Graph from "@/lib/Graph";
 
+export async function getStaticPaths( prevNode ) {
+  return {
+    paths: [],
+    fallback: 'blocking'
+  }
+}
+
 export async function getStaticProps( context ) {
   const root = process.cwd()
   const prefixPaths = path.join(root, "data", "Knowledge");
   const graph = new Graph(prefixPaths);
   const seralizeableGraph = JSON.parse(JSON.stringify(graph)); 
-  const node = context.params.node;
+  const prevNodeUrlEnding = context.params.prevNode; 
   return {
     props: {
       seralizeableGraph,
-      node,
+      prevNodeUrlEnding,
     },
   };
 }
 
-export default function Home({ seralizeableGraph, node }) {
+export default function PrevNode({ seralizeableGraph, prevNodeUrlEnding }) {
   return (
     <div>
       <Head>
@@ -34,9 +41,8 @@ export default function Home({ seralizeableGraph, node }) {
           marginRight: "-50%",
           transform: "translate(-50%, -50%)",
         }}
-      ></div>
-      <text>Context: {node}</text>  
-      <Network graph={seralizeableGraph} width={"100vw"} height={"100vh"} />
+      ></div> 
+      <Network graph={seralizeableGraph} width={"100vw"} height={"100vh"} prevNodeUrlEnding={prevNodeUrlEnding}/>
     </div>
   );
 }

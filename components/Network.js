@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CytoscapeComponent from "react-cytoscapejs";
 import Cytoscape from "cytoscape";
 import COSEBilkent from "cytoscape-cose-bilkent";
+import styles from "../styles/Network.module.css";
 
 Cytoscape.use(COSEBilkent);
 
@@ -41,6 +42,10 @@ class Network extends Component {
     this.graph = props.graph;
     this.width = props.width;
     this.height = props.height;
+    // replace _ with space
+    if (props.prevNodeUrlEnding) {
+      this.prevNodeTitle = props.prevNodeUrlEnding.replace(/_/g, " ");
+    }
   }
   cy = null;
   searchInput = null;
@@ -53,16 +58,13 @@ class Network extends Component {
     });
 
     if (this.highlightedNode) {
-      // If a node is already highlighted, reset its color to the default
       this.highlightedNode.style({ "background-color": "" });
     }
 
     if (matchingNode.length > 0) {
-      // If a matching node is found, change its color to red
-      matchingNode.style({ "background-color": "yellow" });
+      matchingNode.style({ "background-color": "white" });
       this.highlightedNode = matchingNode;
     } else {
-      // If no matching node is found, display a message
       alert(`No node with id "${searchValue}" was found`);
     }
   };
@@ -86,6 +88,7 @@ class Network extends Component {
     };
     return (
       <div>
+        <text className={styles.title}>Interkonnection</text>
         <input
           type="text"
           ref={(input) => (this.searchInput = input)}
@@ -94,8 +97,9 @@ class Network extends Component {
               this.searchNode();
             }
           }}
+          className={styles.search}
         />
-        <button onClick={this.searchNode}>Search</button>
+        <button className={styles.button} onClick={this.searchNode}>Search</button>
         <CytoscapeComponent
           elements={elements}
           layout={layout}
@@ -107,8 +111,18 @@ class Network extends Component {
           cy={(cy) => {
             this.cy = cy;
             cy.on("tap", "node", function (evt) {
-              window.location.href = "nodes/" + evt.target.data("urlEnding");
+              window.location.href = "/nodes/" + evt.target.data("urlEnding");
             });
+            
+            if (this.prevNodeTitle) {
+              const matchingNode = cy.nodes().filter((node) => {
+                return node.id() === this.prevNodeTitle;
+              });
+              if (matchingNode.length > 0) {
+                matchingNode.style({ "background-color": "white" });
+              }
+              this.highlightedNode = matchingNode;
+            }
           }}
           stylesheet={styleSheet}
         />

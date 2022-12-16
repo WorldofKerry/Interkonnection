@@ -1,0 +1,31 @@
+.button {
+    color: white;
+    background-color: #008094;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.button:hover {
+    background-color: #00C2E0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.title {
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #008094;
+    margin: 10px;
+}
+
+.search {
+    margin: 10px;
+    padding: 10px 20px;
+}
