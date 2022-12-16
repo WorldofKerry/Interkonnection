@@ -1,4 +1,4 @@
-import React, { Component, useRef } from "react";
+import React, { Component } from "react";
 import CytoscapeComponent from "react-cytoscapejs";
 import Cytoscape from "cytoscape";
 import COSEBilkent from "cytoscape-cose-bilkent";
@@ -40,7 +40,7 @@ class Network extends Component {
     var elements = [];
     for (var i = 0; i < this.graph.nodes.length; i++) {
       var node = this.graph.nodes[i];
-      var element = { data: { id: node.title, label: node.title } };
+      var element = { data: { id: node.title, label: node.title, urlEnding: node.urlEnding } };
       elements.push(element);
     }
     for (var i = 0; i < this.graph.edges.length; i++) {
@@ -53,8 +53,15 @@ class Network extends Component {
     };
     return (
       <div>
-        {/* <text>{JSON.stringify(this.graph)}</text> */}
-        <input type="text" ref={(input) => this.searchInput = input} />
+        <input
+          type="text"
+          ref={(input) => (this.searchInput = input)}
+          onKeyDown={(event) => {
+            if (event.key === "Enter") {
+              this.searchNode();
+            }
+          }}
+        />
         <button onClick={this.searchNode}>Search</button>
         <CytoscapeComponent
           elements={elements}
@@ -64,7 +71,14 @@ class Network extends Component {
             height: this.height,
             backgroundImage: "radial-gradient(#004954, #000000)",
           }}
-          cy={(cy) => { this.cy = cy }}
+          cy={(cy) => {
+            this.cy = cy;
+            cy.on("tap", "node", function (evt) {
+              // redirect to the node's page
+              window.location.href = "nodes/" + evt.target.data("urlEnding");
+              // console.log(evt.target.style())
+            });
+          }}
         />
       </div>
     );
