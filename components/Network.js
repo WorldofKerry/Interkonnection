@@ -5,6 +5,36 @@ import COSEBilkent from "cytoscape-cose-bilkent";
 
 Cytoscape.use(COSEBilkent);
 
+const styleSheet = [
+  {
+    selector: "node",
+    style: {
+      label: "data(label)",
+      "text-valign": "center",
+      "text-halign": "center",
+      "background-color": "#008094",
+      "text-outline-color": "#00C2E0",
+      "text-outline-width": 0.5,
+      "text-outline-opacity": 1,
+      "font-size": 5,
+      "font-weight": "bold",
+      "text-wrap": "wrap",
+      "text-max-width": "15px",
+      "text-margin-x": "0px",
+      "text-events": "yes",
+      "text-rotation": "autorotate",
+      color: "#000000",
+    },
+  },
+  {
+    selector: "edge",
+    style: {
+      width: 0.75,
+      "line-color": "#00C2E0",
+    },
+  },
+];
+
 class Network extends Component {
   constructor(props) {
     super(props);
@@ -14,20 +44,22 @@ class Network extends Component {
   }
   cy = null;
   searchInput = null;
-  highlightedNode = null; 
+  highlightedNode = null;
 
   searchNode = () => {
-    const searchValue = this.searchInput.value;
-    const matchingNode = this.cy.getElementById(searchValue);
+    const searchValue = this.searchInput.value.toLowerCase();
+    const matchingNode = this.cy.nodes().filter((node) => {
+      return RegExp(searchValue).test(node.id().toLowerCase());
+    });
 
     if (this.highlightedNode) {
       // If a node is already highlighted, reset its color to the default
-      this.highlightedNode.style({ 'background-color': '' });
+      this.highlightedNode.style({ "background-color": "" });
     }
 
     if (matchingNode.length > 0) {
       // If a matching node is found, change its color to red
-      matchingNode.style({ 'background-color': 'red' });
+      matchingNode.style({ "background-color": "red" });
       this.highlightedNode = matchingNode;
     } else {
       // If no matching node is found, display a message
@@ -35,12 +67,13 @@ class Network extends Component {
     }
   };
 
-
   render() {
     var elements = [];
     for (var i = 0; i < this.graph.nodes.length; i++) {
       var node = this.graph.nodes[i];
-      var element = { data: { id: node.title, label: node.title, urlEnding: node.urlEnding } };
+      var element = {
+        data: { id: node.title, label: node.title, urlEnding: node.urlEnding },
+      };
       elements.push(element);
     }
     for (var i = 0; i < this.graph.edges.length; i++) {
@@ -70,42 +103,14 @@ class Network extends Component {
             width: this.width,
             height: this.height,
             backgroundImage: "radial-gradient(#004954, #000000)",
-          }}          
+          }}
           cy={(cy) => {
             this.cy = cy;
             cy.on("tap", "node", function (evt) {
               window.location.href = "nodes/" + evt.target.data("urlEnding");
             });
           }}
-          stylesheet={[
-            {
-              selector: "node",
-              style: {
-                label: "data(label)",
-                "text-valign": "center",
-                "text-halign": "center",
-                "background-color": "#008094",
-                "text-outline-color": "#00C2E0",
-                "text-outline-width": 0.5,
-                "text-outline-opacity": 1,
-                "font-size": 5,
-                "font-weight": "bold",
-                "text-wrap": "wrap",
-                "text-max-width": "15px",
-                "text-margin-x": "0px",
-                "text-events": "yes",
-                "text-rotation": "autorotate",
-                "color": "#000000",
-              },
-            },
-            {
-              selector: "edge",
-              style: {
-                width: 0.75,
-                "line-color": "#00C2E0",
-              },
-            },
-          ]}
+          stylesheet={styleSheet}
         />
       </div>
     );
