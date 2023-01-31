@@ -27,3 +27,4 @@ I'm especially looking for more connections relating to social/biological/chemic
 - Add a search bar to every node page, to be able to search for the shortest path from one node to another node (Dijkstra's)
 - Autofill empty pages with Wikipedia/ChatGPT
 - Parse the latex
+- Make node bigger the more connections it has to other topics
