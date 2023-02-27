@@ -6,7 +6,7 @@
 From this, we can build a simple classifier to takes a Harr Wavelet filter (top-left-most in above image) to see if response > 0.6, we have face, no face otherwise. 
 ## Boosting
 Building a complex classifier using weighted combination of simple classifiers. 
-How do we learn the parameters in $H(x)=\Sigma_j \alpha_j h_j (x)$?
+How do we learn the parameters in $H(x)=\Sigma_j \alpha_j h_j (x)$? We can use [[Boosting Forests]]
 - Randomly select a feature at a time
 - Find the parameters for this feature that maximise classification performance using exponential loss, $J(\theta)=\sum_ke^{-y_kH(x_k)}$, with $\hat y_k=\text{sign}(H(x_k))$
 - Mis-classified examples are weighted more strongly at each stage of classifier learning (the "boosting")

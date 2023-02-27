@@ -1,0 +1,2 @@
+End-to-end resources allocated to , reserved for "call" between source and destination. No packets are used, but rather there is a dedicated connection, called a circuit. 
+Uses [[Frequency Division Multiplexing (FDM)]] or [[Time Division Multiplexing (TDM)]] to handle multiple circuits. 

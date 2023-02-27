@@ -1,0 +1,1 @@
+The difference between our prediction and true value: $r_i=\hat y_i - y_i$, which can be positive or negative, and a value close to zero is close to the true value. 

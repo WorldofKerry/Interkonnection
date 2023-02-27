@@ -1,3 +1,3 @@
-[[Engineering]]
-[[Computation]]
-[[Machine]]
+- [[Engineering]]
+- [[Computation]]
+- [[Machine]]

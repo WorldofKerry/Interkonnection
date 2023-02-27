@@ -1,0 +1,1 @@
+The L1 norm of a vector x with n elements is defined as the sum of the absolute values of its elements: $|x|_1 = \sum_{i=1}^n |x_i|$. 

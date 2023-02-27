@@ -1,3 +1,4 @@
+Based on the principle of [[Boosting]]
 ## Simple Features
 Quite a few simple features that are computationally fast. For example, we have [[Boxlet Features]]. 
 ## Viola Jones Face Detection

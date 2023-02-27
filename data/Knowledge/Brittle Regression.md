@@ -1,0 +1,3 @@
+Regression models that use the L-infinity norm as a measure of error or loss are sometimes also referred to as Chebyshev regression or maximum norm regression. Chebyshev regression can be useful in cases where the data contains outliers or extreme values that may have a disproportionate impact on the results of other types of regression models.
+## Smoothing
+[[L-Infinity Norm]] is convex but non-smooth, so we can use smooth approximate and fit it with gradient descent. The convex and smooth approximate to max function is [[Log-Sum-Exp Function]], as $\max_i\{z_i\}\approx \log(\sum_i \exp(z_i))$. 

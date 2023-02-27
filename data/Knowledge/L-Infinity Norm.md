@@ -1,0 +1,1 @@
+The L infinity norm of a vector x with n elements is defined as the maximum absolute value of its elements: $|x|_{\infty} = \max_{i=1}^n |x_i|$. Also known as maximum norm. 

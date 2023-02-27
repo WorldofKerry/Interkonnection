@@ -1,0 +1,1 @@
+Non-linear regression is a statistical technique used to model the relationship between a dependent variable and one or more independent variables, where the relationship is not linear. It involves fitting a mathematical function to the data that best captures the nonlinear trend in the data.

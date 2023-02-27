@@ -12,5 +12,5 @@
 [[Matrix Algebra]]
 [[Transpose]]
 
-## Systems
-[[Linear System]]
+## Topics
+- [[Norms]]

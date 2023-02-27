@@ -3,4 +3,4 @@ Doing so without explicit instructions leads to [[Machine Learning]]
 ## Problems
 [[Computer Vision]]
 ## Tools
-[[Decision Tree]]
+[[Decision Trees]]

@@ -1,0 +1,1 @@
+A non-linear transform to result in objective function of $\hat y_i = w_0 + w_1 x_i + w_2x_i^2$, it may be non-linear function of $x_i$, it is still a linear function of $w$. 

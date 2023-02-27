@@ -2,6 +2,6 @@
  - [[Web Development]]
  - [[Database]]
  - [[Security]]
- - [[Networking]]
+ - [[Computer Networking]]
 ## Products
  - [[Particle Boron]]

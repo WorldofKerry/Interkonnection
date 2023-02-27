@@ -1,0 +1,1 @@
+The L0 norm of a vector x with n elements is defined as the number of non-zero elements in x: $|x|_0 = \sum_{i=1}^n [x_i \neq 0]$. Note that the L0 norm is not a true norm, as it violates the triangle inequality and does not scale linearly. However, it is often used in regularization as a way to encourage sparsity in the solution.

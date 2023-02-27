@@ -1,0 +1,1 @@
+A non-convex function is a function that has at least one local minimum that is not a global minimum. This makes optimization of non-convex functions more difficult and prone to getting stuck in local optima.

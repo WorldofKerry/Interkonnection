@@ -1,0 +1,1 @@
+Reinforcement learning is a type of machine learning that involves an agent learning to make decisions by interacting with an environment and receiving rewards or punishments for its actions. The goal of reinforcement learning is to learn an optimal policy that maximizes the cumulative reward over time, by using trial-and-error exploration and exploitation of the environment.

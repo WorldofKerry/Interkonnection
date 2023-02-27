@@ -1,0 +1,1 @@
+where each channel is at a different frequency

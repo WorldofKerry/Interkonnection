@@ -1,0 +1,1 @@
+The L2 norm of a vector x with n elements is defined as the square root of the sum of the squares of its elements: $|x|_2 = \sqrt{\sum_{i=1}^n x_i^2}$. 

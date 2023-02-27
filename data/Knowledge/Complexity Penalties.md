@@ -1,0 +1,3 @@
+Put a penalty on the model complexity. E.g. we minimize the training error plus the degree of polynomial. 
+## Information Criteria
+Scores are usually in the form $\text{score}(p)=\frac 12 || Z_pv-y||^2+\lambda K$. The value of $k$ is the number of estimated parameters/degrees of freedom, e.g. for polynomial basis, we have $k=(p+1)$. The parameter $\lambda > 0$ controls how strong we penalize complexity. A $\lambda=1$ is called the Akaike information criterion (AIC). 

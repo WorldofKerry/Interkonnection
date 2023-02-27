@@ -1,0 +1,1 @@
+A tree of clusters, with differing $\epsilon$s at each depth. 

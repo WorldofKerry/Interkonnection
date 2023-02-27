@@ -1,7 +1,14 @@
-Goal is the solve the problem where [[K-Means Clustering]] fails in situations where proximity to mean is not indicative of class, even if pairwise proximity makes class memberships clear. 
+Clustering is a machine learning technique used to group similar data points together based on their inherent similarities. It involves identifying patterns and similarities within datasets to aid in tasks such as data analysis, classification, and recommendation systems.
+## Types
+- [[K-Means Clustering]]
+- [[Hierarchical Clustering]]
+- [[Density-based Clustering (DBSCAN)]]: for [[Non-Convex]] data set
+## Other Types
+- [[Ensemble Clustering]]
+- [[Biclustering]]
 ## Agglomerative Clustering: 
 Each data point starts as a separate cluster. Clusters are recursively merged.
-1. Make each point a seperate cluster
+1. Make each point a separate cluster
 2. Until the clustering is satisfactory, merge the two clusters with the smallest inter-cluster distance
 ## Divisive Clustering
 The entire data set starts as a single cluster. Clusters are recursively split. 
