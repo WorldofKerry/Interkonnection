@@ -8,6 +8,7 @@ Machine learning is a subfield of [[artificial intelligence]] that involves the 
 - [[Reinforcement Learning]]
 - [[Deep Learning]]
 ## Methods / Techniques
+- [[Probabilistic Classifiers]]
 - [[Gradient Descent]]
 - [[Bayesian Methods]]
 - [[Decision Trees]]/[[Random Forests]]

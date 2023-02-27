@@ -1,3 +1,0 @@
-A simple non-linear parametric classifier. Consists of a tree in which each internal node is associated with a feature test. A data point starts at the root and recursively proceeds to the child node determined by the feature test, until it reaches a leaf node. The leaf node stores a class label or a probability distribution over class labels
-## [[Decision Forests]]
-Use a distribution over class at the leaves of the tree, combining predictions from multiple trees (ensembling) to give a final classification. 

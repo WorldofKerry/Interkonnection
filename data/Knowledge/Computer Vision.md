@@ -9,6 +9,8 @@ Allows computers to get a high-level understand from digital images or videos.
 - [[Texture]]
 - [[Local Image Features]]
 - [[Pixel Labelling]]
+- [[Scaled Representations]]
+- [[Template Matching]]
 ## Camera and Image Transformations
 - [[Cameras]]
 - [[Planar Transformations]]
